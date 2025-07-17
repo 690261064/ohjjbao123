@@ -27,6 +27,7 @@ const proxyPool = require('./utils/proxyPool');
 const requireAdminAuth = require('./middleware/adminAuth');
 
 const app = express();
+app.set('trust proxy', 1); 
 const port = process.env.PORT || 3000; // Default to 3000 if PORT not set
 
 // --- Middleware ---
